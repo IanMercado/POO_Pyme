@@ -1,17 +1,20 @@
 public class Impresora {
 
-	String marca;
-	String modelo;
-	String color;
+	private String marca;
+	private String modelo;
+	private String color;
 
 	// PRUEBA: Impresora(String marca) {
 	// this.marca=marca;
 	// }
 	
 	
-	//(constructor)
+	//constructor
 	public Impresora() {
-		System.out.println("Se creo un objeto de tipo impresora");
+		
+		this.marca="Epson";
+		this.modelo="TX135";
+		this.color="Color";
 	}
 
 	// Métodos
