@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList; //Importar paquete java util
 
 public class Main {
 
@@ -10,6 +11,23 @@ public class Main {
 	
 		Cliente cliente=new Cliente();
 		cliente.DatosCliente();
+		
+		//Declarar
+		ArrayList<Producto> listaproductos;
+		
+		//Instanciar
+		listaproductos=new ArrayList<Producto>();
+			
+		//Agregar elementos
+		listaproductos.add( new Producto("Procesador","i7-4790K",38.389) );
+		listaproductos.add( new Producto("Motherboard","Asus Prime X570-P",19.139) );
+		listaproductos.add( new Producto("Memoria RAM","Kingston HyperX Fury",8.998) );
+		
+		//Recorrer ArrayList
+		for (int i = 0; i < listaproductos.size(); i++) {
+			System.out.println("--> "+listaproductos.get(i));
+		}
+		
 		
 //		System.out.println("Nombre: ");
 //		String nombre=sc.nextLine();
