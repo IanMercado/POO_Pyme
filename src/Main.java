@@ -23,9 +23,10 @@ public class Main {
 		listaproductos.add( new Producto("Motherboard","Asus Prime X570-P",19.139) );
 		listaproductos.add( new Producto("Memoria RAM","Kingston HyperX Fury",8.998) );
 		
+		
 		//Recorrer ArrayList
 		for (int i = 0; i < listaproductos.size(); i++) {
-			System.out.println("--> "+listaproductos.get(i));
+			System.out.println("--> "+listaproductos.get(i).tipo + listaproductos.get(i).descripcion);
 		}
 		
 		
