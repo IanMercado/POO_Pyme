@@ -10,24 +10,12 @@ public class Main {
 		Impresora impresora=new Impresora();
 	
 		Cliente cliente=new Cliente();
-		cliente.DatosCliente();
+//		cliente.DatosCliente();
 		
-		//Declarar
-		ArrayList<Producto> listaproductos;
+		Producto productos=new Producto("","", 0.1, 1);
+//		productos.Listaproductos();
+		productos.pedidoCliente();
 		
-		//Instanciar
-		listaproductos=new ArrayList<Producto>();
-			
-		//Agregar elementos
-		listaproductos.add( new Producto("Procesador","i7-4790K",38.389) );
-		listaproductos.add( new Producto("Motherboard","Asus Prime X570-P",19.139) );
-		listaproductos.add( new Producto("Memoria RAM","Kingston HyperX Fury",8.998) );
-		
-		
-		//Recorrer ArrayList
-		for (int i = 0; i < listaproductos.size(); i++) {
-			System.out.println("--> "+listaproductos.get(i).tipo + listaproductos.get(i).descripcion);
-		}
 		
 		
 //		System.out.println("Nombre: ");
@@ -43,7 +31,11 @@ public class Main {
 //		String direccion=sc.nextLine();
 //		
 //		System.out.println("Nombre: "+nombre+"\nApellido: "+apellido+"\nDNI: "+dni+"\nDirección: "+direccion);
+		
+		
 	}
 
+	
+	
 
 }
