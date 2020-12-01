@@ -1,10 +1,14 @@
+import java.util.ArrayList;
+
 
 public class Pedido {
-	
-	private String PedidoProducto;
-	private int FechaApertura;
-	private int FechaCierre;
+
 	private int numeroPedido;
 	
 
+	public Pedido (int numeroPedido) {
+		this.numeroPedido = numeroPedido;
+	
+	}
+	
 }
