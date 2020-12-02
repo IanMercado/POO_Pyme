@@ -20,7 +20,23 @@ public class Producto {
 	//Declarar
 	Scanner sc = new Scanner(System.in);
 	
-			
+	
+	public String getCodigo(){
+		return this.codigo;
+	}
+	
+	public String getTipo(){
+		return this.tipo;
+	}
+	
+	public String getDescripcion(){
+		return this.descripcion;
+	}
+	
+	public double getPrecio(){
+		return this.precio;
+	}
+	
 }
 
 	

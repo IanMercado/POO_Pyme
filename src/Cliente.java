@@ -36,7 +36,7 @@ public class Cliente {
 		String direccion=sc.nextLine();
 		
 		DatosCliente= nombre+" "+apellido;
-		System.out.println("\nHola "+DatosCliente+". Gracias por confiar en nosotros!"+"\nSelecciona a continuación el producto que quieras comprar:");
+		System.out.println("\nHola "+DatosCliente+". Gracias por confiar en nosotros!"+"\nTe mostraremos a continuación nuestro catálogo de productos:\n");
 		
 	}
 	
