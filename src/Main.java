@@ -13,7 +13,7 @@ public class Main {
 		System.out.println("***Bienvenido a nuestra Pyme***\nPor favor complete los siguientes datos");
 		
 		Cliente cliente=new Cliente();
-//		cliente.DatosCliente();
+		cliente.DatosCliente();
 	
 
 		List<Producto> productos = new ArrayList<Producto>();
@@ -35,13 +35,10 @@ public class Main {
 		}
 		
 		Pedido pedido = new Pedido (5000);
-//		System.out.println("\nIndiquenos el código del producto a comprar:");
-//		
-//		String codigoProductoAPedir = sc.nextLine();
 		
 		Producto productoAgregado =null;
 		
-		
+
 		String respuesta;
 		int i = 0;
 		double Total = 0;
@@ -56,16 +53,15 @@ public class Main {
 			if (producto.getCodigo() == (codigoProductoAPedir)  ) {
 				
 					productoAgregado = producto;
+//					pedido.getPrecioDistinto(); INTENTO DE SUMA DE PRECIOS
+					Total = Total + producto.getPrecio();
 					System.out.println(producto.getTipo() + producto.getDescripcion());
-					
 					sc.nextLine();
 				}
 		pedido.agregarProducto(productoAgregado);
 		
-		Total = producto.getPrecio();
-		Total++;
 		}
-		System.out.println ("\nQueres seguir comprando? SI/NO");
+		System.out.println ("\n¿Queres seguir comprando? SI/NO");
 		respuesta = sc.nextLine();
 		
 		i++;
@@ -73,13 +69,9 @@ public class Main {
 		
 		}while (respuesta.equalsIgnoreCase("si")); 
 		if (respuesta.equalsIgnoreCase("No")) {
-			System.out.println("\nSu numero de pedido es el: "+ pedido.getNumeroPedido() +"\nUsted pidio " + i +  " productos" + "\nEl total es: " + pedido.getPrecioDistinto());
+			System.out.println("\n**Su número de pedido es el: "+ pedido.getNumeroPedido() +"\n**Usted pidió: " + i +  " productos" + "\n**GRACIAS POR SU COMPRA!");
 			} 
 		
 	
 		}
-	
-
-	
-	
 }

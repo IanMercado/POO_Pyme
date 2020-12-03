@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 
 public class Pedido {
@@ -7,6 +8,9 @@ public class Pedido {
 	private double total = 0;
 	private int numeroPedido;
 	private List<Producto> productos = new ArrayList<Producto>();
+	
+	Scanner sc = new Scanner(System.in);
+	
 	
 	
 	public Pedido (int numeroPedido) {
@@ -22,11 +26,24 @@ public class Pedido {
 		productos.add(producto);
 	}
 	
-	public double getPrecioDistinto () {
-		for (Producto producto : productos) {
-			this.total=producto.getPrecio();
-			total = total + producto.getPrecio();
-		}
-		return this.total;
-	}
+	
+	
+//	public double getPrecioDistinto () {  INTENTO DE SUMA DE PRECIOS
+//		for (Producto producto : productos) {
+//		
+//			int codigoProductoAPedir = sc.nextInt();
+//			Producto productoAgregado =null;
+//			
+//			if (producto.getCodigo() == (codigoProductoAPedir)  ) {
+//				
+//				productoAgregado = producto;
+//				
+//				System.out.println(producto.getPrecio());
+//				sc.nextLine();
+//			}
+//			
+//		}
+//			
+//		return this.total;
+//	}
 }
