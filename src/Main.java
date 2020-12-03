@@ -13,16 +13,16 @@ public class Main {
 		System.out.println("***Bienvenido a nuestra Pyme***\nPor favor complete los siguientes datos");
 		
 		Cliente cliente=new Cliente();
-		cliente.DatosCliente();
+//		cliente.DatosCliente();
 	
 
 		List<Producto> productos = new ArrayList<Producto>();
 		
-		Producto prod1 = new Producto("Procesador"," i7-4790K",38.389, "1");
-		Producto prod2 = new Producto("Motherboard"," Asus Prime X570-P",19.139, "2");
-		Producto prod3 = new Producto("Memoria RAM"," Kingston HyperX Fury",8.998, "3");
-		Producto prod4 = new Producto("Fuente de energia"," CORSAIR CV650W 80PLUS BRONZE",17.972, "4");
-		Producto prod5 = new Producto("Disco Rigido"," Western Digital Blue 1TB 7200Rpm SATA3",5.069, "5");
+		Producto prod1 = new Producto("Procesador"," i7-4790K",38389, 1);
+		Producto prod2 = new Producto("Motherboard"," Asus Prime X570-P",19139, 2);
+		Producto prod3 = new Producto("Memoria RAM"," Kingston HyperX Fury",8998, 3);
+		Producto prod4 = new Producto("Fuente de energia"," CORSAIR CV650W 80PLUS BRONZE",17972, 4);
+		Producto prod5 = new Producto("Disco Rigido"," Western Digital Blue 1TB 7200Rpm SATA3",5069, 5);
 		
 		productos.add(prod1);
 		productos.add(prod2);
@@ -34,12 +34,52 @@ public class Main {
 			System.out.println(producto.getCodigo()+" --> "+producto.getTipo()+producto.getDescripcion()+" $"+producto.getPrecio());
 		}
 		
-		Pedido pedido = new Pedido (001);
-		System.out.println("\nIndiquenos el código del producto a comprar:");
-		String codigoProductoAPedir = sc.nextLine();
-	}
+		Pedido pedido = new Pedido (5000);
+//		System.out.println("\nIndiquenos el código del producto a comprar:");
+//		
+//		String codigoProductoAPedir = sc.nextLine();
+		
+		Producto productoAgregado =null;
+		
+		
+		String respuesta;
+		int i = 0;
+		double Total = 0;
+		
+		do {
+		
+			System.out.println("\nIndiquenos el código del producto a comprar:");
+			
+			int codigoProductoAPedir = sc.nextInt();
+			
+		for (Producto producto : productos) {
+			if (producto.getCodigo() == (codigoProductoAPedir)  ) {
+				
+					productoAgregado = producto;
+					System.out.println(producto.getTipo() + producto.getDescripcion());
+					
+					sc.nextLine();
+				}
+		pedido.agregarProducto(productoAgregado);
+		
+		Total = producto.getPrecio();
+		Total++;
+		}
+		System.out.println ("\nQueres seguir comprando? SI/NO");
+		respuesta = sc.nextLine();
+		
+		i++;
+		
+		
+		}while (respuesta.equalsIgnoreCase("si")); 
+		if (respuesta.equalsIgnoreCase("No")) {
+			System.out.println("\nSu numero de pedido es el: "+ pedido.getNumeroPedido() +"\nUsted pidio " + i +  " productos" + "\nEl total es: " + pedido.getPrecioDistinto());
+			} 
+		
+	
+		}
+	
 
 	
 	
-
 }
