@@ -8,7 +8,7 @@ public class Main {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		Impresora impresora=new Impresora();
+		
 		
 		System.out.println("***Bienvenido a nuestra Pyme***\nPor favor complete los siguientes datos");
 		
