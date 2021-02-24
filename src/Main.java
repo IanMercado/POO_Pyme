@@ -64,8 +64,7 @@ public class Main {
 
 		} while (respuesta.equalsIgnoreCase("si"));
 		if (respuesta.equalsIgnoreCase("No")) {
-			System.out.println("\n**Su número de pedido es el: " + pedido.getNumeroPedido() + "\n**Usted pidió: " + i
-					+ " productos" + "\n**GRACIAS POR SU COMPRA!");
+			System.out.println("\n**Su número de pedido es el: " + pedido.getNumeroPedido() + "\n**Usted pidió: " + i + " productos" + "\n**GRACIAS POR SU COMPRA!");
 		}
 
 	}

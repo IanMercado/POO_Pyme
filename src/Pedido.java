@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Pedido {
 
-	private double total = 0;
 	private int numeroPedido;
 	private List<Producto> productos = new ArrayList<Producto>();
 
